@@ -58,5 +58,48 @@
                 </c:otherwise>
             </c:choose>
         </c:if>
+
+        <c:if test="${selectedMember != null}">
+            <div class="bg-white rounded-2xl border border-gray-100 p-6 mt-6">
+                <div class="flex items-center justify-between mb-4 gap-3">
+                    <h2 class="text-lg font-bold text-gray-900">Transaction History - ${selectedMember.fullName}</h2>
+                    <a href="${pageContext.request.contextPath}/staff?page=search&q=${q}" class="text-xs font-semibold bg-gray-100 text-gray-700 px-3 py-1.5 rounded-lg hover:bg-gray-200 transition">Clear History</a>
+                </div>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-sm min-w-[760px]">
+                        <thead>
+                        <tr class="text-left bg-gray-50 text-gray-600">
+                            <th class="px-4 py-3 font-semibold">Date</th>
+                            <th class="px-4 py-3 font-semibold">Type</th>
+                            <th class="px-4 py-3 font-semibold">Amount</th>
+                            <th class="px-4 py-3 font-semibold">Description</th>
+                            <th class="px-4 py-3 font-semibold">Recorded By</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <c:choose>
+                            <c:when test="${not empty searchMemberHistory}">
+                                <c:forEach var="txn" items="${searchMemberHistory}">
+                                    <tr class="border-b border-gray-100 hover:bg-gray-50 transition">
+                                        <td class="px-4 py-3 text-gray-600"><fmt:formatDate value="${txn.transactionDate}" pattern="MMM dd, yyyy HH:mm"/></td>
+                                        <td class="px-4 py-3 font-medium text-gray-900">${txn.type}</td>
+                                        <td class="px-4 py-3 font-semibold text-gray-800">Rs. <fmt:formatNumber value="${txn.amount}" pattern="#,##0.00"/></td>
+                                        <td class="px-4 py-3 text-gray-600">${txn.description}</td>
+                                        <td class="px-4 py-3 text-gray-600">${txn.recordedByName}</td>
+                                    </tr>
+                                </c:forEach>
+                            </c:when>
+                            <c:otherwise>
+                                <tr>
+                                    <td colspan="5" class="px-4 py-6 text-center text-gray-400">No transaction history found for this member.</td>
+                                </tr>
+                            </c:otherwise>
+                        </c:choose>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </c:if>
+    </div></div>
 </body>
 </html>
