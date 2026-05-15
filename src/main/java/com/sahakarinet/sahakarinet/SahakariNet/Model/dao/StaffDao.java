@@ -38,4 +38,27 @@ public class StaffDao {
             }
         }
     }
+    public int registerStaff(Staff staff) {
+        String sql = "INSERT INTO users (username, email, password_hash, role, is_active) VALUES (?,?,?,?,?)";
+        String profileSql = "INSERT INTO staff_profiles (user_id, full_name, gender, phone, citizenship_no, permanent_address, temporary_address) VALUES (?,?,?,?,?,?,?)";
+
+        try (Connection c = conn()) {
+            ensureStaffProfileTable(c);
+            c.setAutoCommit(false);
+
+            int userId = -1;
+            try (PreparedStatement ps = c.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS)) {
+                ps.setString(1, staff.getUsername());
+                ps.setString(2, staff.getEmail());
+                ps.setString(3, staff.getPasswordHash());
+                ps.setString(4, "STAFF");
+                ps.setBoolean(5, staff.isActive());
+                ps.executeUpdate();
+
+                try (ResultSet keys = ps.getGeneratedKeys()) {
+                    if (keys.next()) {
+                        userId = keys.getInt(1);
+                    }
+                }
+            }
 }
