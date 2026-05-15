@@ -85,4 +85,24 @@ public class StaffDao {
         }
         return -1;
     }
+    public Staff findByUserId(int userId) {
+        String sql = "SELECT u.id, u.username, u.email, u.password_hash, u.is_active, u.created_at, "
+                + "sp.full_name, sp.gender, sp.phone, sp.citizenship_no, sp.permanent_address, sp.temporary_address "
+                + "FROM users u LEFT JOIN staff_profiles sp ON sp.user_id = u.id "
+                + "WHERE u.id = ? AND u.role = 'STAFF'";
+        try (Connection c = conn()) {
+            ensureStaffProfileTable(c);
+            try (PreparedStatement ps = c.prepareStatement(sql)) {
+                ps.setInt(1, userId);
+                try (ResultSet rs = ps.executeQuery()) {
+                    if (rs.next()) {
+                        return mapStaff(rs);
+                    }
+                }
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
 }
