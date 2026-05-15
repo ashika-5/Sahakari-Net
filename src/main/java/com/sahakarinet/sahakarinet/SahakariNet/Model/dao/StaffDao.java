@@ -105,4 +105,23 @@ public class StaffDao {
         }
         return null;
     }
+    public List<Staff> getAll() {
+        List<Staff> staffList = new ArrayList<>();
+        String sql = "SELECT u.id, u.username, u.email, u.password_hash, u.is_active, u.created_at, "
+                + "sp.full_name, sp.gender, sp.phone, sp.citizenship_no, sp.permanent_address, sp.temporary_address "
+                + "FROM users u LEFT JOIN staff_profiles sp ON sp.user_id = u.id "
+                + "WHERE u.role = 'STAFF' ORDER BY u.id DESC";
+        try (Connection c = conn()) {
+            ensureStaffProfileTable(c);
+            try (PreparedStatement ps = c.prepareStatement(sql); ResultSet rs = ps.executeQuery()) {
+                while (rs.next()) {
+                    staffList.add(mapStaff(rs));
+                }
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return staffList;
+    }
+
 }
