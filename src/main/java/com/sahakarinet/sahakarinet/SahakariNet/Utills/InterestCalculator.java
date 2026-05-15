@@ -14,5 +14,13 @@ public class InterestCalculator {
         return Math.round((principal * r * power / (power - 1)) * 100.0) / 100.0;
     }
 
+    /**
+     * Calculate simple interest for savings.
+     * Interest = Principal × Rate × Time(years)
+     */
+    public static double calculateSavingsInterest(double balance, double annualRatePercent, int months) {
+        return Math.round((balance * annualRatePercent / 100.0 * months / 12.0) * 100.0) / 100.0;
+    }
+
 
 }
