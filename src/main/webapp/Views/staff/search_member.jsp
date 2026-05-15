@@ -26,5 +26,37 @@
             <button type="submit" class="bg-green-700 text-white px-6 py-3 rounded-xl text-sm font-semibold hover:bg-green-800 transition">Search</button>
         </form>
 
+        <c:if test="${q != null && !q.isEmpty()}">
+            <c:choose>
+                <c:when test="${empty members}">
+                    <div class="bg-white rounded-2xl border border-gray-100 p-12 text-center">
+                        <p class="text-gray-400 text-sm">No members found for "<strong>${q}</strong>"</p>
+                    </div>
+                </c:when>
+                <c:otherwise>
+                    <div class="space-y-3">
+                        <c:forEach var="m" items="${members}">
+                            <div class="bg-white rounded-2xl border border-gray-100 p-5 flex items-center justify-between">
+                                <div class="flex items-center gap-4">
+                                    <div class="w-11 h-11 rounded-xl bg-green-100 flex items-center justify-center text-green-700 font-bold text-lg uppercase">${m.fullName.substring(0,1)}</div>
+                                    <div>
+                                        <div class="font-bold text-gray-900 text-sm">${m.fullName}</div>
+                                        <div class="text-xs text-gray-500 mt-0.5">${m.phone} &bull; <span class="font-mono">${m.citizenshipNo}</span></div>
+                                    </div>
+                                </div>
+                                <div class="flex gap-2 flex-wrap justify-end">
+                                    <a href="${pageContext.request.contextPath}/staff?page=deposit&memberId=${m.id}"    class="text-xs font-semibold bg-green-100 text-green-700 px-3 py-1.5 rounded-lg hover:bg-green-200 transition">Deposit</a>
+                                    <a href="${pageContext.request.contextPath}/staff?page=withdrawal&memberId=${m.id}" class="text-xs font-semibold bg-red-100 text-red-600 px-3 py-1.5 rounded-lg hover:bg-red-200 transition">Withdraw</a>
+                                    <a href="${pageContext.request.contextPath}/staff?page=repayment&memberId=${m.id}" class="text-xs font-semibold bg-amber-100 text-amber-700 px-3 py-1.5 rounded-lg hover:bg-amber-200 transition">Repayment</a>
+                                    <a href="${pageContext.request.contextPath}/staff?page=loan-disburse&memberId=${m.id}" class="text-xs font-semibold bg-blue-100 text-blue-700 px-3 py-1.5 rounded-lg hover:bg-blue-200 transition">Loan View</a>
+                                    <a href="${pageContext.request.contextPath}/staff?page=search&memberId=${m.id}&q=${q}" class="text-xs font-semibold bg-slate-100 text-slate-700 px-3 py-1.5 rounded-lg hover:bg-slate-200 transition">History</a>
+                                    <a href="${pageContext.request.contextPath}/staff?page=member-detail&id=${m.id}"   class="text-xs font-semibold bg-gray-100 text-gray-700 px-3 py-1.5 rounded-lg hover:bg-gray-200 transition">View →</a>
+                                </div>
+                            </div>
+                        </c:forEach>
+                    </div>
+                </c:otherwise>
+            </c:choose>
+        </c:if>
 </body>
 </html>
