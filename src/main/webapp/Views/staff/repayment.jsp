@@ -94,5 +94,42 @@
                 </c:otherwise>
             </c:choose>
         </c:if>
+
+        <div class="bg-white rounded-2xl border border-gray-100 p-6">
+            <h2 class="text-lg font-bold text-gray-900 mb-4">Recent Loan Repayments</h2>
+            <div class="overflow-x-auto">
+                <table class="w-full text-sm min-w-[700px]">
+                    <thead>
+                    <tr class="text-left bg-gray-50 text-gray-600">
+                        <th class="px-4 py-3 font-semibold">Date</th>
+                        <th class="px-4 py-3 font-semibold">Member</th>
+                        <th class="px-4 py-3 font-semibold">Amount</th>
+                        <th class="px-4 py-3 font-semibold">Description</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <c:choose>
+                        <c:when test="${not empty repaymentHistory}">
+                            <c:forEach var="txn" items="${repaymentHistory}">
+                                <tr class="border-b border-gray-100 hover:bg-amber-50 transition">
+                                    <td class="px-4 py-3 text-gray-600"><fmt:formatDate value="${txn.transactionDate}" pattern="MMM dd, yyyy HH:mm"/></td>
+                                    <td class="px-4 py-3 font-medium text-gray-900">${txn.memberName}</td>
+                                    <td class="px-4 py-3 font-bold text-amber-700">Rs. <fmt:formatNumber value="${txn.amount}" pattern="#,##0.00"/></td>
+                                    <td class="px-4 py-3 text-gray-600">${txn.description}</td>
+                                </tr>
+                            </c:forEach>
+                        </c:when>
+                        <c:otherwise>
+                            <tr>
+                                <td colspan="4" class="px-4 py-6 text-center text-gray-400">No repayment records found.</td>
+                            </tr>
+                        </c:otherwise>
+                    </c:choose>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
 </body>
 </html>
