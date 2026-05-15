@@ -10,6 +10,7 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.sahakarinet.sahakarinet.SahakariNet.Model.Staff;
 import com.sahakarinet.sahakarinet.SahakariNet.Utills.DbConnection;
 
 public class StaffDao {
@@ -61,4 +62,27 @@ public class StaffDao {
                     }
                 }
             }
+             if (userId <= 0) {
+                c.rollback();
+                return -1;
+            }
+
+            try (PreparedStatement profilePs = c.prepareStatement(profileSql)) {
+                profilePs.setInt(1, userId);
+                profilePs.setString(2, staff.getFullName());
+                profilePs.setString(3, staff.getGender());
+                profilePs.setString(4, staff.getPhone());
+                profilePs.setString(5, staff.getCitizenshipNo());
+                profilePs.setString(6, staff.getPermanentAddress());
+                profilePs.setString(7, staff.getTemporaryAddress());
+                profilePs.executeUpdate();
+            }
+
+            c.commit();
+            return userId;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return -1;
+    }
 }
