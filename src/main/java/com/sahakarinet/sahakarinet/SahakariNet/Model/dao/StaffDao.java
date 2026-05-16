@@ -123,5 +123,23 @@ public class StaffDao {
         }
         return staffList;
     }
+    public boolean fullNameExists(String fullName) {
+        String sql = "SELECT COUNT(*) FROM staff_profiles WHERE LOWER(full_name) = LOWER(?)";
+        try (Connection c = conn()) {
+            ensureStaffProfileTable(c);
+            try (PreparedStatement ps = c.prepareStatement(sql)) {
+                ps.setString(1, fullName);
+                try (ResultSet rs = ps.executeQuery()) {
+                    if (rs.next()) {
+                        return rs.getInt(1) > 0;
+                    }
+                }
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
+
 
 }
