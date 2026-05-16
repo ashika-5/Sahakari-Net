@@ -192,6 +192,23 @@ public class StaffDao {
         }
         return false;
     }
+        private Staff mapStaff(ResultSet rs) throws SQLException {
+        Staff staff = new Staff();
+        staff.setUserId(rs.getInt("id"));
+        staff.setUsername(rs.getString("username"));
+        staff.setEmail(rs.getString("email"));
+        staff.setPasswordHash(rs.getString("password_hash"));
+        staff.setActive(rs.getBoolean("is_active"));
+        staff.setCreatedAt(rs.getTimestamp("created_at"));
+        staff.setFullName(rs.getString("full_name"));
+        staff.setGender(rs.getString("gender"));
+        staff.setPhone(rs.getString("phone"));
+        staff.setCitizenshipNo(rs.getString("citizenship_no"));
+        staff.setPermanentAddress(rs.getString("permanent_address"));
+        staff.setTemporaryAddress(rs.getString("temporary_address"));
+        return staff;
+    }
+
 
 
 }
