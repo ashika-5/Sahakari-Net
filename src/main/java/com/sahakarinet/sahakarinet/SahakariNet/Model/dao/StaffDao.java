@@ -157,6 +157,41 @@ public class StaffDao {
         }
         return false;
     }
+    // public boolean addressExists(String address) {
+    //     String sql = "SELECT COUNT(*) FROM staff_profiles WHERE LOWER(permanent_address) = LOWER(?) OR LOWER(temporary_address) = LOWER(?)";
+    //     try (Connection c = conn()) {
+    //         ensureStaffProfileTable(c);
+    //         try (PreparedStatement ps = c.prepareStatement(sql)) {
+    //             ps.setString(1, address);
+    //             ps.setString(2, address);
+    //             try (ResultSet rs = ps.executeQuery()) {
+    //                 if (rs.next()) {
+    //                     return rs.getInt(1) > 0;
+    //                 }
+    //             }
+    //         }
+    //     } catch (SQLException e) {
+    //         e.printStackTrace();
+    //     }
+    //     return false;
+    // }
+    public boolean citizenshipExists(String citizenshipNo) {
+        String sql = "SELECT COUNT(*) FROM staff_profiles WHERE citizenship_no = ?";
+        try (Connection c = conn()) {
+            ensureStaffProfileTable(c);
+            try (PreparedStatement ps = c.prepareStatement(sql)) {
+                ps.setString(1, citizenshipNo);
+                try (ResultSet rs = ps.executeQuery()) {
+                    if (rs.next()) {
+                        return rs.getInt(1) > 0;
+                    }
+                }
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
 
 
 }
