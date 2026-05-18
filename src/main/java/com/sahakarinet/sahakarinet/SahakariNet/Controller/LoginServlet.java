@@ -1,10 +1,10 @@
 package com.sahakarinet.sahakarinet.SahakariNet.Controller;
 
-import com.sahakarinet.sahakarinet.SahakariNet.model.User;
-import com.sahakarinet.sahakarinet.SahakariNet.model.Member;
-import com.sahakarinet.sahakarinet.SahakariNet.model.dao.MemberDao;
-import com.sahakarinet.sahakarinet.SahakariNet.model.dao.UserDao;
-import com.sahakarinet.sahakarinet.SahakariNet.utils.SessionUtil;
+import com.sahakarinet.sahakarinet.SahakariNet.Model.User;
+import com.sahakarinet.sahakarinet.SahakariNet.Model.Member;
+import com.sahakarinet.sahakarinet.SahakariNet.Model.dao.MemberDao;
+import com.sahakarinet.sahakarinet.SahakariNet.Model.dao.UserDao;
+import com.sahakarinet.sahakarinet.SahakariNet.Utills.SessionUtil;
 import jakarta.servlet.*;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.*;
