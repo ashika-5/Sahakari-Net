@@ -26,3 +26,9 @@
         </div>
     </div>
 </nav>
+<section class="text-center py-16 px-6">
+    <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">About SahakariNet</h1>
+    <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+        Transforming traditional cooperatives into secure, efficient, and fully digital systems.
+    </p>
+</section>
