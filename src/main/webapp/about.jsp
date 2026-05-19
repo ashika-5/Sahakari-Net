@@ -54,3 +54,26 @@
             <li>Maintains secure role-based access (Admin, Staff, Member)</li>
         </ul>
     </div>
+
+     <div class="backdrop-blur bg-white/80 border border-white/50 p-8 rounded-3xl shadow-lg">
+        <h2 class="text-2xl font-semibold text-gray-900 mb-4">Why is it important today?</h2>
+        <p class="text-gray-600 leading-relaxed">
+            Many cooperatives still rely on manual systems that are slow, error-prone, and hard to audit.
+            SahakariNet solves this with a reliable digital workflow that improves accuracy, reduces fraud risk,
+            and builds trust through transparent records.
+        </p>
+    </div>
+    <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-white/90 p-6 rounded-2xl shadow border border-gray-100">
+            <h3 class="font-semibold text-emerald-700 mb-2">Efficiency</h3>
+            <p class="text-gray-600 text-sm">Automates repetitive tasks and reduces manual workload.</p>
+        </div>
+        <div class="bg-white/90 p-6 rounded-2xl shadow border border-gray-100">
+            <h3 class="font-semibold text-sky-700 mb-2">Security</h3>
+            <p class="text-gray-600 text-sm">Protects records through authentication and role controls.</p>
+        </div>
+        <div class="bg-white/90 p-6 rounded-2xl shadow border border-gray-100">
+            <h3 class="font-semibold text-indigo-700 mb-2">Transparency</h3>
+            <p class="text-gray-600 text-sm">Financial operations remain visible and auditable.</p>
+        </div>
+    </div>
