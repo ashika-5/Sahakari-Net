@@ -27,3 +27,8 @@
         </div>
     </div>
 </nav>
+
+<section class="text-center py-16 px-6">
+    <h2 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-3 tracking-tight">Contact Us</h2>
+    <p class="text-gray-600 text-lg">Have questions or feedback? We are here to help you.</p>
+</section>
