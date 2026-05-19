@@ -52,3 +52,26 @@
     </div>
     <% } %>
 
+    <div class="grid md:grid-cols-2 gap-10">
+        <div class="backdrop-blur bg-white/80 border border-white/50 p-8 rounded-3xl shadow-lg">
+            <h3 class="text-2xl font-semibold mb-6 text-gray-900">Get in Touch</h3>
+            <div class="space-y-5 text-gray-700">
+                <div class="flex items-center gap-3">
+                    <span class="text-sky-600 text-xl">📍</span>
+                    <p>Dharan, Nepal</p>
+                </div>
+                <div class="flex items-center gap-3">
+                    <span class="text-sky-600 text-xl">📞</span>
+                    <p>+977-98XXXXXXXX</p>
+                </div>
+                <div class="flex items-center gap-3">
+                    <span class="text-sky-600 text-xl">📧</span>
+                    <p>info@sahakarinet.com</p>
+                </div>
+            </div>
+            <div class="mt-10">
+                <h4 class="font-semibold text-gray-800 mb-2">Office Hours</h4>
+                <p class="text-gray-600">Sunday - Friday: 9 AM - 5 PM</p>
+            </div>
+        </div>
+
