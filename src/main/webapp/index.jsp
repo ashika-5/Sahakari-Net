@@ -250,4 +250,59 @@
         </div>
     </section>
 
+    <section id="dashboards" class="px-5 lg:px-8 py-24 bg-white">
+        <div class="container-wide mx-auto">
+            <div class="max-w-3xl mx-auto text-center mb-14">
+                <h2 class="section-title text-3xl sm:text-4xl font-extrabold text-slate-900">Tailored Dashboards for Every Role</h2>
+                <p class="mt-4 text-slate-500 leading-7">
+                    SahakariNet implements strict role-based access control, providing specific tools and views based on administrative responsibilities.
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-3 gap-5 lg:gap-6">
+                <article class="card-hover bg-white rounded-2xl border border-slate-200 p-7">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-12 h-12 rounded-xl bg-blue-50"></div>
+                        <h3 class="text-xl font-semibold text-slate-900">Admin View</h3>
+                    </div>
+                    <ul class="space-y-3 text-sm leading-6 text-slate-500">
+                        <li>Approve or reject member registrations</li>
+                        <li>Review and approve loan applications</li>
+                        <li>View loan defaulter lists instantly</li>
+                        <li>Generate comprehensive financial reports</li>
+                        <li>Manage staff accounts and permissions</li>
+                    </ul>
+                </article>
+
+                <article class="card-hover bg-white rounded-2xl border border-slate-200 p-7">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-12 h-12 rounded-xl bg-emerald-50"></div>
+                        <h3 class="text-xl font-semibold text-slate-900">Staff View</h3>
+                    </div>
+                    <ul class="space-y-3 text-sm leading-6 text-slate-500">
+                        <li>Record member deposits and withdrawals</li>
+                        <li>Process approved loan disbursements</li>
+                        <li>Record loan repayments from members</li>
+                        <li>Search member records efficiently</li>
+                        <li>View automated interest calculations</li>
+                    </ul>
+                </article>
+
+                <article class="card-hover bg-white rounded-2xl border border-slate-200 p-7">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-12 h-12 rounded-xl bg-violet-50"></div>
+                        <h3 class="text-xl font-semibold text-slate-900">Member View</h3>
+                    </div>
+                    <ul class="space-y-3 text-sm leading-6 text-slate-500">
+                        <li>View personal savings balance and shares</li>
+                        <li>Submit loan applications directly online</li>
+                        <li>View detailed loan repayment schedules</li>
+                        <li>Track personal transaction history</li>
+                        <li>Update personal profile details securely</li>
+                    </ul>
+                </article>
+            </div>
+        </div>
+    </section>
+
 
