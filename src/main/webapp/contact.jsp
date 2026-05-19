@@ -32,3 +32,23 @@
     <h2 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-3 tracking-tight">Contact Us</h2>
     <p class="text-gray-600 text-lg">Have questions or feedback? We are here to help you.</p>
 </section>
+
+<section class="max-w-6xl mx-auto px-6 pb-16">
+    <% if ("true".equals(request.getParameter("sent"))) { %>
+    <div class="mb-6 bg-green-50 border border-green-200 text-green-800 rounded-2xl px-5 py-4 text-sm">
+        Your message has been sent successfully. Thank you for contacting SahakariNet.
+    </div>
+    <% } %>
+
+    <% if ("missing".equals(request.getParameter("error"))) { %>
+    <div class="mb-6 bg-red-50 border border-red-200 text-red-800 rounded-2xl px-5 py-4 text-sm">
+        Please fill in all required fields before submitting.
+    </div>
+    <% } %>
+
+    <% if ("failed".equals(request.getParameter("error"))) { %>
+    <div class="mb-6 bg-red-50 border border-red-200 text-red-800 rounded-2xl px-5 py-4 text-sm">
+        Sorry, we could not send your message right now. Please try again later.
+    </div>
+    <% } %>
+
