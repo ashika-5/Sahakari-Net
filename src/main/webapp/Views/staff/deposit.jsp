@@ -68,3 +68,50 @@
                 </div>
             </div>
         </c:if>
+                <c:if test="${member != null}">
+            <!-- Member info card -->
+            <div class="bg-white rounded-2xl border border-gray-100 p-5 mb-5">
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 rounded-2xl bg-green-100 flex items-center justify-center text-green-700 font-bold text-xl uppercase">${member.fullName.substring(0,1)}</div>
+                    <div>
+                        <div class="font-bold text-gray-900">${member.fullName}</div>
+                        <div class="text-xs text-gray-500">${member.phone} &bull; <span class="font-mono">${member.citizenshipNo}</span></div>
+                    </div>
+                    <c:if test="${savings != null}">
+                        <div class="ml-auto text-right">
+                            <div class="text-xs text-gray-400">Current Balance</div>
+                            <div class="text-lg font-extrabold text-green-700">Rs. <fmt:formatNumber value="${savings.balance}" pattern="#,##0.00"/></div>
+                        </div>
+                    </c:if>
+                </div>
+            </div>
+
+            <!-- Deposit form -->
+            <div class="bg-white rounded-2xl border border-gray-100 p-6">
+                <c:if test="${error != null}">
+                    <div class="bg-red-50 border border-red-200 text-red-700 rounded-xl px-4 py-3 mb-4 text-sm">${error}</div>
+                </c:if>
+                <form action="${pageContext.request.contextPath}/transaction" method="post">
+                    <input type="hidden" name="action"   value="deposit">
+                    <input type="hidden" name="memberId" value="${member.id}">
+                    <div class="space-y-4">
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-1.5">Amount (Rs.) <span class="text-red-500">*</span></label>
+                            <input type="number" name="amount" min="1" step="0.01" required placeholder="0.00" autofocus
+                                   class="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-green-500 bg-gray-50 text-lg font-bold">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-1.5">Description</label>
+                            <input type="text" name="description" placeholder="e.g. Monthly deposit" value="Monthly savings deposit"
+                                   class="w-full border border-gray-200 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-green-500 bg-gray-50">
+                        </div>
+                        <button type="submit" class="w-full bg-green-700 hover:bg-green-800 text-white font-bold py-3.5 rounded-xl text-sm transition">
+                            ✓ Record Deposit
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </c:if>
+
+    </div></div>
+</body></html>
