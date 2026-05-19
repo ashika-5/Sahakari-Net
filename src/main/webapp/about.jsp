@@ -32,3 +32,25 @@
         Transforming traditional cooperatives into secure, efficient, and fully digital systems.
     </p>
 </section>
+
+<section class="max-w-6xl mx-auto px-6 pb-16 space-y-10">
+    <div class="backdrop-blur bg-white/80 border border-white/50 p-8 rounded-3xl shadow-lg">
+        <h2 class="text-2xl font-semibold text-gray-900 mb-4">What is SahakariNet?</h2>
+        <p class="text-gray-600 leading-relaxed">
+            SahakariNet is a web-based cooperative management system designed to digitize and simplify
+            the daily operations of cooperatives in Nepal. It replaces traditional paper-based record keeping
+            with a secure, centralized digital platform that manages members, savings, loans, and transactions efficiently.
+        </p>
+    </div>
+
+    <div class="backdrop-blur bg-white/80 border border-white/50 p-8 rounded-3xl shadow-lg">
+        <h2 class="text-2xl font-semibold text-gray-900 mb-4">What does it do?</h2>
+        <ul class="text-gray-600 space-y-3 list-disc pl-5">
+            <li>Manages member registration and approval workflow</li>
+            <li>Tracks savings, deposits, and withdrawals</li>
+            <li>Handles loan applications, approvals, and repayments</li>
+            <li>Automatically calculates interest on savings and loans</li>
+            <li>Generates real-time financial reports</li>
+            <li>Maintains secure role-based access (Admin, Staff, Member)</li>
+        </ul>
+    </div>
