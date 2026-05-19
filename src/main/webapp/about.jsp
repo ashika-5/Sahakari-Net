@@ -77,3 +77,17 @@
             <p class="text-gray-600 text-sm">Financial operations remain visible and auditable.</p>
         </div>
     </div>
+     <div class="backdrop-blur bg-white/80 border border-white/50 p-8 rounded-3xl shadow-lg">
+        <h2 class="text-2xl font-semibold text-gray-900 mb-4">Our Vision</h2>
+        <p class="text-gray-600 leading-relaxed">
+            We aim to digitally empower cooperatives across Nepal with a smart, reliable,
+            and easy-to-use platform that strengthens accountability and operational efficiency.
+        </p>
+    </div>
+</section>
+
+<footer class="py-8 text-center text-xs text-gray-500 border-t border-gray-100 bg-white/60">
+    SahakariNet • Digital Cooperative Management
+</footer>
+</body>
+</html>
