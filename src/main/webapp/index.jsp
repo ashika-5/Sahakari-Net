@@ -305,4 +305,21 @@
         </div>
     </section>
 
+     <section class="px-5 lg:px-8 py-20 bg-blue-600 text-white">
+        <div class="container-wide mx-auto text-center max-w-3xl">
+            <h2 class="section-title text-3xl sm:text-4xl font-extrabold tracking-tight">Ready to Transform Your Cooperative?</h2>
+            <p class="mt-5 text-blue-100 leading-7">
+                Join the movement towards digital empowerment in Nepal's cooperative sector. Reduce manual errors, build trust, and save time with SahakariNet.
+            </p>
+            <div class="flex flex-wrap justify-center gap-3 mt-8">
+                <a href="register.jsp" class="px-5 py-3 rounded-lg bg-white text-blue-700 font-semibold hover:bg-blue-50 transition">
+                    Register Now
+                </a>
+                <a href="contact.jsp" class="px-5 py-3 rounded-lg border border-white/30 bg-white/5 text-white font-medium hover:bg-white/10 transition">
+                    Contact Sales
+                </a>
+            </div>
+        </div>
+    </section>
+
 
