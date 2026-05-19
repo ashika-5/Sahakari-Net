@@ -201,3 +201,53 @@
         </div>
     </section>
 
+     <section id="features" class="px-5 lg:px-8 py-20 bg-[#eaf2ff]">
+        <div class="container-wide mx-auto">
+            <div class="max-w-3xl mx-auto text-center mb-14">
+                <h2 class="section-title text-3xl sm:text-4xl font-extrabold text-slate-900">Built for Modern Cooperatives</h2>
+                <p class="mt-4 text-slate-500 leading-7">
+                    Everything you need to run your cooperative efficiently, securely, and transparently in one unified MVC architecture platform.
+                </p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-6">
+                <article class="card-hover bg-white rounded-2xl border border-slate-200 p-6">
+                    <div class="w-10 h-10 rounded-xl bg-blue-50 mb-5"></div>
+                    <h3 class="font-semibold text-lg text-slate-900">Secure & Transparent</h3>
+                    <p class="mt-3 text-sm leading-6 text-slate-500">Encrypted passwords, secure user sessions, and a comprehensive audit trail build trust among your members and reduce fraud risks.</p>
+                </article>
+
+                <article class="card-hover bg-white rounded-2xl border border-slate-200 p-6">
+                    <div class="w-10 h-10 rounded-xl bg-blue-50 mb-5"></div>
+                    <h3 class="font-semibold text-lg text-slate-900">Automated Calculations</h3>
+                    <p class="mt-3 text-sm leading-6 text-slate-500">The system automatically calculates complex interest rates on savings and loans, eliminating manual errors and saving valuable staff time.</p>
+                </article>
+
+                <article class="card-hover bg-white rounded-2xl border border-slate-200 p-6">
+                    <div class="w-10 h-10 rounded-xl bg-blue-50 mb-5"></div>
+                    <h3 class="font-semibold text-lg text-slate-900">Digital Loan Processing</h3>
+                    <p class="mt-3 text-sm leading-6 text-slate-500">Manage the entire loan lifecycle from member application submission to admin approval, fund disbursement, and repayment tracking.</p>
+                </article>
+
+                <article class="card-hover bg-white rounded-2xl border border-slate-200 p-6">
+                    <div class="w-10 h-10 rounded-xl bg-blue-50 mb-5"></div>
+                    <h3 class="font-semibold text-lg text-slate-900">Real-Time Reporting</h3>
+                    <p class="mt-3 text-sm leading-6 text-slate-500">Generate accurate reports for auditing instantly. View monthly savings totals, loan recovery rates, and track defaulters easily.</p>
+                </article>
+
+                <article class="card-hover bg-white rounded-2xl border border-slate-200 p-6">
+                    <div class="w-10 h-10 rounded-xl bg-blue-50 mb-5"></div>
+                    <h3 class="font-semibold text-lg text-slate-900">Member Management</h3>
+                    <p class="mt-3 text-sm leading-6 text-slate-500">Streamline registrations with automated approval workflows. Maintain complete digital profiles including citizenship details and history.</p>
+                </article>
+
+                <article class="card-hover bg-white rounded-2xl border border-slate-200 p-6">
+                    <div class="w-10 h-10 rounded-xl bg-blue-50 mb-5"></div>
+                    <h3 class="font-semibold text-lg text-slate-900">Complete History</h3>
+                    <p class="mt-3 text-sm leading-6 text-slate-500">Access full transaction histories across the cooperative or search specific member records by name, phone, or citizenship number.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+
