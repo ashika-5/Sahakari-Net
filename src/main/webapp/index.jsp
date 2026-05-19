@@ -29,3 +29,36 @@
                 linear-gradient(180deg, #ffffff 0%, #f8fbff 36%, #eef4ff 36%, #eef4ff 66%, #ffffff 66%, #ffffff 100%);
             color: var(--text);
         }
+
+        .container-wide { max-width: 1180px; }
+
+        .glass-border {
+            border: 1px solid rgba(37, 99, 235, 0.12);
+            box-shadow: 0 18px 50px rgba(15, 23, 42, 0.08);
+        }
+
+        .soft-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(18px);
+            border: 1px solid rgba(255, 255, 255, 0.65);
+        }
+
+        .hero-shadow {
+            box-shadow: 0 28px 60px rgba(15, 23, 42, 0.14);
+        }
+
+        .card-hover {
+            transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+        }
+
+        .card-hover:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 24px 45px rgba(15, 23, 42, 0.08);
+            border-color: rgba(37, 99, 235, 0.18);
+        }
+
+        .section-title {
+            letter-spacing: -0.04em;
+        }
+    </style>
+
