@@ -62,3 +62,33 @@
         }
     </style>
 
+</head>
+<body class="min-h-screen text-slate-900">
+<header class="sticky top-0 z-50 bg-white/90 backdrop-blur-xl border-b border-slate-200/70">
+    <div class="container-wide mx-auto px-5 lg:px-8 h-16 flex items-center justify-between">
+        <a href="index.jsp" class="flex items-center gap-2.5 font-extrabold text-slate-900">
+            <span class="w-7 h-7 rounded-lg bg-blue-600 text-white flex items-center justify-center shadow-sm">
+                <svg viewBox="0 0 24 24" fill="none" class="w-4 h-4" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="M4 12.5 12 5l8 7.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M6.5 10.5V19h11V10.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </span>
+            <span class="tracking-tight">Sahakari<span class="text-blue-600">Net</span></span>
+        </a>
+
+        <nav class="hidden md:flex items-center gap-8 text-sm text-slate-500">
+            <a href="#features" class="hover:text-slate-900 transition">Features</a>
+            <a href="#dashboards" class="hover:text-slate-900 transition">Dashboards</a>
+            <a href="about.jsp" class="hover:text-slate-900 transition">About</a>
+            <a href="contact.jsp" class="hover:text-slate-900 transition">Contact</a>
+        </nav>
+
+        <div class="flex items-center gap-3 text-sm">
+            <a href="login.jsp" class="px-3.5 py-2 text-slate-700 hover:text-slate-900 transition">Log in</a>
+            <a href="register.jsp" class="px-4 py-2.5 rounded-lg bg-blue-600 text-white font-semibold hover:bg-blue-700 transition shadow-sm shadow-blue-200">
+                Register
+            </a>
+        </div>
+    </div>
+</header>
+
