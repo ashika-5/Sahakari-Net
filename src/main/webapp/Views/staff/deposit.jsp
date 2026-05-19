@@ -32,4 +32,39 @@
             <c:set var="memberSearchSelectButtonClass" value="bg-green-100 text-green-700"/>
             <c:set var="memberSearchSelectButtonHoverClass" value="hover:bg-green-200"/>
             <jsp:include page="/Views/staff/_member_search_select.jsp"/>
-
+             <!-- Deposit History Section -->
+            <div class="bg-white rounded-2xl border border-gray-100 p-6 mt-6">
+                <h2 class="text-lg font-bold text-gray-900 mb-4">Recent Deposits</h2>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-sm">
+                        <thead>
+                            <tr class="border-b border-gray-200">
+                                <th class="text-left px-4 py-3 font-semibold text-gray-700">Date</th>
+                                <th class="text-left px-4 py-3 font-semibold text-gray-700">Member</th>
+                                <th class="text-left px-4 py-3 font-semibold text-gray-700">Amount</th>
+                                <th class="text-left px-4 py-3 font-semibold text-gray-700">Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <c:choose>
+                                <c:when test="${not empty depositHistory}">
+                                    <c:forEach var="txn" items="${depositHistory}">
+                                        <tr class="border-b border-gray-100 hover:bg-green-50 transition">
+                                            <td class="px-4 py-3 text-gray-600"><fmt:formatDate value="${txn.transactionDate}" pattern="MMM dd, yyyy HH:mm"/></td>
+                                            <td class="px-4 py-3 font-medium text-gray-900">${txn.memberName}</td>
+                                            <td class="px-4 py-3 font-bold text-green-700">+ Rs. <fmt:formatNumber value="${txn.amount}" pattern="#,##0.00"/></td>
+                                            <td class="px-4 py-3 text-gray-600">${txn.description}</td>
+                                        </tr>
+                                    </c:forEach>
+                                </c:when>
+                                <c:otherwise>
+                                    <tr>
+                                        <td colspan="4" class="px-4 py-8 text-center text-gray-500">No deposits recorded yet</td>
+                                    </tr>
+                                </c:otherwise>
+                            </c:choose>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </c:if>
