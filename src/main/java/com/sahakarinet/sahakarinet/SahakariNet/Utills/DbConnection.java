@@ -23,3 +23,12 @@ public class DbConnection {
         Connection conec = DriverManager.getConnection(url, user, pass);
         return conec;
     }
+    
+    // Test database connection status
+    public static boolean testConnection() {
+        try (Connection conn = getConnection()) {
+            if (conn != null) {
+                System.out.println("Database connection successful!");
+                System.out.println("Connected to: " + conn.getMetaData().getURL());
+                return true;
+            }
