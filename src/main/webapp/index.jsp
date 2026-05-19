@@ -321,5 +321,63 @@
             </div>
         </div>
     </section>
+</main>
 
+<footer class="bg-slate-950 text-slate-300">
+    <div class="container-wide mx-auto px-5 lg:px-8 py-14 lg:py-16 grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
+        <div>
+            <div class="flex items-center gap-2.5 font-extrabold text-white">
+                <span class="w-8 h-8 rounded-lg bg-white text-slate-950 flex items-center justify-center">
+                    <svg viewBox="0 0 24 24" fill="none" class="w-4 h-4" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                        <path d="M4 12.5 12 5l8 7.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M6.5 10.5V19h11V10.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </span>
+                <span>SahakariNet</span>
+            </div>
+            <p class="mt-4 text-sm leading-7 text-slate-400 max-w-xs">
+                Empowering Nepal's cooperative sector with secure, digital, and efficient web-based management tools.
+            </p>
+        </div>
+
+        <div>
+            <h3 class="text-white font-semibold mb-4">Platform</h3>
+            <ul class="space-y-3 text-sm text-slate-400">
+                <li><a href="#features" class="hover:text-white transition">Features</a></li>
+                <li><a href="#dashboards" class="hover:text-white transition">Role Access</a></li>
+                <li><a href="#" class="hover:text-white transition">Security & Privacy</a></li>
+                <li><a href="#" class="hover:text-white transition">System Requirements</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <h3 class="text-white font-semibold mb-4">Company</h3>
+            <ul class="space-y-3 text-sm text-slate-400">
+                <li><a href="about.jsp" class="hover:text-white transition">About Us</a></li>
+                <li><a href="#" class="hover:text-white transition">Success Stories</a></li>
+                <li><a href="#" class="hover:text-white transition">News & Updates</a></li>
+                <li><a href="contact.jsp" class="hover:text-white transition">Contact Us</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <h3 class="text-white font-semibold mb-4">Support</h3>
+            <ul class="space-y-3 text-sm text-slate-400">
+                <li><a href="#" class="hover:text-white transition">Help Center</a></li>
+                <li><a href="#" class="hover:text-white transition">Documentation</a></li>
+                <li><a href="#" class="hover:text-white transition">Terms of Service</a></li>
+                <li><a href="#" class="hover:text-white transition">Privacy Policy</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="border-t border-white/10">
+        <div class="container-wide mx-auto px-5 lg:px-8 py-5 text-xs text-slate-500">
+            © 2026 SahakariNet. Built for Nepal's cooperative community.
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
 
