@@ -92,3 +92,112 @@
     </div>
 </header>
 
+<main>
+    <section class="px-5 lg:px-8 pt-16 pb-20 lg:pt-24 lg:pb-28">
+        <div class="container-wide mx-auto grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            <div class="max-w-xl">
+                <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-50 border border-blue-100 text-blue-700 text-xs font-semibold mb-6">
+                    <span class="w-2 h-2 rounded-full bg-blue-500"></span>
+                    Empowering Nepal's Cooperatives
+                </div>
+
+                <h1 class="section-title text-4xl sm:text-5xl lg:text-6xl font-black leading-[1.02] tracking-tight text-slate-950">
+                    Digitize Your
+                    Cooperative
+                    Management
+                </h1>
+
+                <p class="mt-6 text-base sm:text-lg leading-8 text-slate-500 max-w-lg">
+                    Move beyond manual ledgers. SahakariNet brings efficiency, transparency, and security to your daily financial operations with a complete web-based system.
+                </p>
+
+                <div class="flex flex-wrap gap-3 mt-8">
+                    <a href="register.jsp" class="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-lg bg-blue-600 text-white font-semibold shadow-sm shadow-blue-200 hover:bg-blue-700 transition">
+                        Get Started Today
+                        <svg viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4" aria-hidden="true"><path fill-rule="evenodd" d="M7.47 4.47a.75.75 0 011.06 0l5 5a.75.75 0 010 1.06l-5 5a.75.75 0 11-1.06-1.06L11.94 10 7.47 5.53a.75.75 0 010-1.06z" clip-rule="evenodd"/></svg>
+                    </a>
+                    <a href="#features" class="inline-flex items-center justify-center px-5 py-3 rounded-lg bg-white border border-slate-200 text-slate-700 font-medium hover:border-slate-300 hover:bg-slate-50 transition">
+                        Learn More
+                    </a>
+                </div>
+            </div>
+
+            <div class="relative">
+                <div class="absolute -inset-3 rounded-[28px] bg-gradient-to-br from-blue-200/30 via-transparent to-blue-500/30 blur-2xl"></div>
+                <div class="relative soft-panel glass-border rounded-[22px] p-4 sm:p-5 lg:p-6 hero-shadow">
+                    <div class="relative overflow-hidden rounded-[18px] bg-gradient-to-br from-blue-50 via-white to-blue-300/80 p-4 sm:p-5 lg:p-6 min-h-[320px] flex items-center justify-center">
+                        <div class="absolute inset-x-0 top-0 h-10 bg-gradient-to-r from-blue-700 via-blue-600 to-blue-500 rounded-t-[18px]"></div>
+
+                        <div class="relative w-full max-w-[470px] rounded-[14px] bg-slate-950/90 p-3 shadow-2xl shadow-slate-900/20">
+                            <div class="rounded-[10px] bg-slate-100 overflow-hidden">
+                                <div class="h-5 bg-blue-600/95 flex items-center gap-1.5 px-2.5">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-white/90"></span>
+                                    <span class="w-1.5 h-1.5 rounded-full bg-white/70"></span>
+                                    <span class="w-1.5 h-1.5 rounded-full bg-white/50"></span>
+                                </div>
+                                <div class="p-3 sm:p-4 bg-slate-50">
+                                    <div class="grid grid-cols-[120px_1fr] gap-3 items-start">
+                                        <aside class="rounded-xl bg-blue-100/70 p-3">
+                                            <div class="space-y-2">
+                                                <div class="h-2.5 w-16 rounded-full bg-blue-200"></div>
+                                                <div class="h-2.5 w-20 rounded-full bg-blue-200"></div>
+                                                <div class="h-2.5 w-12 rounded-full bg-blue-300"></div>
+                                                <div class="mt-3 h-16 rounded-xl bg-white border border-blue-100"></div>
+                                                <div class="h-12 rounded-xl bg-white border border-blue-100"></div>
+                                            </div>
+                                        </aside>
+
+                                        <section class="space-y-3">
+                                            <div class="flex items-center justify-between">
+                                                <div>
+                                                    <div class="h-3 w-20 rounded-full bg-slate-200 mb-2"></div>
+                                                    <div class="h-5 w-28 rounded-full bg-slate-300"></div>
+                                                </div>
+                                                <div class="h-8 w-8 rounded-full bg-blue-200"></div>
+                                            </div>
+
+                                            <div class="grid grid-cols-3 gap-3">
+                                                <div class="rounded-xl bg-white border border-slate-100 p-3 shadow-sm">
+                                                    <div class="h-2.5 w-14 rounded-full bg-slate-200 mb-3"></div>
+                                                    <div class="h-5 w-16 rounded-full bg-blue-200"></div>
+                                                </div>
+                                                <div class="rounded-xl bg-white border border-slate-100 p-3 shadow-sm">
+                                                    <div class="h-2.5 w-12 rounded-full bg-slate-200 mb-3"></div>
+                                                    <div class="h-5 w-20 rounded-full bg-blue-200"></div>
+                                                </div>
+                                                <div class="rounded-xl bg-white border border-slate-100 p-3 shadow-sm">
+                                                    <div class="h-2.5 w-10 rounded-full bg-slate-200 mb-3"></div>
+                                                    <div class="h-5 w-14 rounded-full bg-blue-200"></div>
+                                                </div>
+                                            </div>
+
+                                            <div class="grid grid-cols-2 gap-3">
+                                                <div class="rounded-2xl bg-white border border-slate-100 p-3 h-40 shadow-sm">
+                                                    <div class="h-3 w-24 rounded-full bg-slate-200 mb-4"></div>
+                                                    <div class="flex items-end gap-2 h-24 pt-10">
+                                                        <span class="w-3 bg-blue-200 rounded-t-md h-10"></span>
+                                                        <span class="w-3 bg-blue-300 rounded-t-md h-16"></span>
+                                                        <span class="w-3 bg-blue-400 rounded-t-md h-12"></span>
+                                                        <span class="w-3 bg-blue-500 rounded-t-md h-20"></span>
+                                                        <span class="w-3 bg-blue-300 rounded-t-md h-14"></span>
+                                                        <span class="w-3 bg-blue-400 rounded-t-md h-24"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="rounded-2xl bg-white border border-slate-100 p-3 h-40 shadow-sm flex flex-col">
+                                                    <div class="h-3 w-24 rounded-full bg-slate-200 mb-4"></div>
+                                                    <div class="flex-1 flex items-center justify-center">
+                                                        <div class="w-28 h-28 rounded-full border-[14px] border-blue-500/20 border-r-blue-600 border-b-blue-600"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </section>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
