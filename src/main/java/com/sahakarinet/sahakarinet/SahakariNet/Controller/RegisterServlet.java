@@ -1,12 +1,12 @@
 package com.sahakarinet.sahakarinet.SahakariNet.Controller;
 
-import com.sahakarinet.sahakarinet.SahakariNet.model.Member;
-import com.sahakarinet.sahakarinet.SahakariNet.model.User;
-import com.sahakarinet.sahakarinet.SahakariNet.model.dao.MemberDao;
-import com.sahakarinet.sahakarinet.SahakariNet.model.dao.StaffDao;
-import com.sahakarinet.sahakarinet.SahakariNet.model.dao.UserDao;
-import com.sahakarinet.sahakarinet.SahakariNet.utils.PasswordUtil;
-import com.sahakarinet.sahakarinet.SahakariNet.utils.ValidationUtil;
+import com.sahakarinet.sahakarinet.SahakariNet.Model.Member;
+import com.sahakarinet.sahakarinet.SahakariNet.Model.User;
+import com.sahakarinet.sahakarinet.SahakariNet.Model.dao.MemberDao;
+import com.sahakarinet.sahakarinet.SahakariNet.Model.dao.StaffDao;
+import com.sahakarinet.sahakarinet.SahakariNet.Model.dao.UserDao;
+import com.sahakarinet.sahakarinet.SahakariNet.Utills.PasswordUtil;
+import com.sahakarinet.sahakarinet.SahakariNet.Utills.ValidatioUtil;
 
 import jakarta.servlet.*;
 import jakarta.servlet.annotation.WebServlet;
